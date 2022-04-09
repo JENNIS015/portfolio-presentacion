@@ -1,9 +1,14 @@
-import React from 'react'
+import React from "react";
 
-const Section=()=> {
+const Section = () => {
   return (
-    <div>S</div>
-  )
-}
+    <div className='container'>
+ 
+        <div class='row'>
+            <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem repellat sint doloribus. Mollitia saepe totam ducimus, beatae magni aperiam laborum error quaerat, magnam, doloremque vel reiciendis. Quibusdam voluptas fugit saepe.</h1></div> 
+ 
+    </div>
+  );
+};
 
-export default Section
+export default Section;

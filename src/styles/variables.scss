@@ -3,6 +3,8 @@ $background-color: rgb(12, 6, 22);
 $light-color: white;
 $dark-color: black;
 $pink: #e100ff;
+$yellow:#dfb55e;
+$red:#542d2e;
 
 :root {
   font-family: "Raleway", sans-serif;
@@ -54,7 +56,8 @@ body {
 }
 h4 {
   font-size: 1.2em !important;
-  color: $pink;
+  color: $yellow;
+  margin-top:0px!important;
   text-transform: uppercase;
   display: block;
   margin-bottom: -20px !important;
@@ -66,17 +69,33 @@ h1 {
   color: $light-color;
   text-align: left;
   font-weight: 700 !important;
-  display: flex;
+  display:  grid;
 
   span {
     justify-content: center;
     color: $background-color;
 
-    text-shadow: -0.5px 0 $light-color, 0 0.5px $light-color,
-      0.5px 0 $light-color, 0 -0.5px $light-color;
+    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
 
     letter-spacing: 5px;
   }
+}
+.circle{
+  margin-left: 1%;
+  margin-top: -300px;
+  z-index: 0;
+}
+.secondary {
+  font-size: 3em !important;
+  text-align: end;
+  margin-top:100px
+}
+
+
+.third{
+ 
+  margin-top: 50px;
+
 }
 $base: 0.6rem;
 .chevron {
@@ -150,12 +169,30 @@ svg {
   max-width: 100%;
   height: auto;
 }
+.chartSpace{
+  display: block;
+  width: -webkit-fill-available;
+  z-index: 1;
+}
+.container {
+  width: 80%!important;
+}
+.textRight{
+  text-align: right;
+
+}
 //-
 // The artwork layer controls the vertical movement and scale of the entire animation
 .effectUp {
+  // animation: effectUp 1000ms ease-in-out;
+  // display: block;
+  // position: absolute;
+  // z-index: 0;
+  // margin-right: 45%;
+
   animation: effectUp 1000ms ease-in-out;
   display: block;
-  position: absolute;
+  position: relative;
   z-index: 0;
   margin-right: 45%;
 }
@@ -229,33 +266,55 @@ svg {
 
 //swi´
 
-.appSlider {
-  height: 100%;
+// .appSlider {
+//   height: 100%;
+// }
+.swiper-slide-active{
+  height: 100vh!important;
 }
-
+.swiper-slide-next{
+  height: 100vh!important;
+  width: 100%;
+}
 body {
-  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+
   font-size: 14px;
   color: #000;
   margin: 0;
   padding: 0;
 }
-
+.right{
+  text-align: rigth;
+  display:flex;
+}
 .swiper {
   width: 100%;
-  height: 100%;
-}
 
+  .wrap {
+    box-sizing: border-box;
+  }
+  #content {
+    box-sizing: border-box;
+  }
+  .swiper-container {
+    max-height: 100%;
+  }
+}
+hr{
+  width: 9.53em;
+  margin-top: 1.35em;
+  margin-bottom: 1.35em;
+}
 .swiper-slide {
   text-align: center;
   font-size: 18px;
   background: black;
-
+height:100vh;
   /* Center slide text vertically */
   display: -webkit-box;
   display: -ms-flexbox;
   display: -webkit-flex;
-  display: flex;
+  display: block;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
@@ -276,16 +335,18 @@ body {
 //SKILLS
 
 #techList {
-  text-transform: uppercase;
+ 
   color: #ffffff;
   display: inline-block;
 }
 
 .react {
-  font-weight: 700;
+
   letter-spacing: -0.05em;
-  font-size: 4rem;
+  font-size: 3rem;
   animation: effectDown 0.5s forwards linear;
+ 
+  background-image: linear-gradient(to right, #000000, #d6ae5b);
 }
 .html5 {
   font-weight: 300;
@@ -295,11 +356,12 @@ body {
   animation: effectDown 0.5s forwards linear;
 }
 
-.css3 {
+.css {
   letter-spacing: 0.01em;
-  font-weight: 200;
+  font-weight: 500;
   transform: rotate(90deg);
   font-size: 3rem;
+
 }
 
 .wordpress {
@@ -307,6 +369,9 @@ body {
   font-weight: 400;
   font-size: 2rem;
   animation: effectDown 0.5s forwards linear;
+  background-image: linear-gradient(to right, #000000 , #542d2e);
+  padding: 10px;
+
 }
 
 .express {
@@ -324,24 +389,30 @@ body {
   font-weight: 400;
   letter-spacing: 1.4em;
   font-size: 1rem;
+  background: $red;
+    padding: 10px;
 }
 
 .node {
   letter-spacing: 0.045em;
   font-weight: 700;
   font-size: 1.5rem;
+ 
 }
 
 .python {
   font-weight: 700;
   letter-spacing: -0.01em;
-  font-size: 4rem;
+  font-size: 3rem;
+  background-image: linear-gradient(to right, #000000 , #dfb55e);
+
 }
 
 .mongodb {
   font-weight: 300;
   letter-spacing: 0.5em;
-  margin: 30px;
+  margin-right: 100px;
+  margin-left: 100px;
 }
 
 .sql {
@@ -352,7 +423,7 @@ body {
 }
 
 .skills {
-  color: $pink;
+  color: $yellow;
   font-weight: 700;
   font-size: 5rem;
   margin: 5px;
@@ -363,20 +434,24 @@ body {
 }
 
 //cofee
-
+.ingrid{
+  display: inline-grid!important;
+    margin-top: 15%;
+ 
+}
 .containerCoffee {
   width: 300px;
   height: 280px;
   position: relative;
-  margin-top: 300px;
-  margin-left: 100px;
+
+
 }
 .coffee-header {
   width: 100%;
   height: 80px;
   top: 0;
   left: 0;
-  background-color: #ddcfcc;
+  background-color: #ffffff;
   border-radius: 10px;
 }
 .coffee-header__buttons {
@@ -409,8 +484,8 @@ body {
   top: calc(50% - 25px);
   left: calc(50% - 25px);
   border-radius: 50%;
-  background-color: $pink;
-  border: 5px solid $pink;
+  background-color: $yellow;
+  border: 5px solid $yellow;
   box-sizing: border-box;
 }
 .coffee-header__details {
@@ -428,13 +503,13 @@ body {
   position: absolute;
   top: 80px;
   left: calc(50% - 45%);
-  background-color: #bcb0af;
+  background-color: #7a622f;
 }
 .coffee-medium:before {
   content: "";
   width: 90%;
   height: 100px;
-  background-color: #776f6e;
+  background-color: #000000;
   position: absolute;
   bottom: 0;
   left: calc(50% - 45%);
@@ -620,7 +695,15 @@ body {
   left: -8px;
   background-color: #000;
 }
-
+.centrado{
+a {
+  padding: 10px;
+  background: $yellow;
+  color: black;
+  border-radius: 20px;
+  margin-top: 30px;
+  display: table-caption;
+}}
 // ------------ END Fun stuff
 // .horiz-scroll-wrapper {
 //   height: 100vw;

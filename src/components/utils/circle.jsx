@@ -5,7 +5,7 @@ function circle() {
     <div>
       <div className='images'>
         <svg
-          className='effectDown'
+          className='effectDown circle'
           viewBox='0 0 100 100'
           xmlns='http://www.w3.org/2000/svg'>
           <defs>

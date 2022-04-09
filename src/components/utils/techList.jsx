@@ -16,12 +16,12 @@ const TechList=()=> {
         <BounceInDown>
           <h6 class='wordpress'>wordpress</h6>
         </BounceInDown>
-        <h6 class='css3'>css</h6>
+        <h6 class='css'>css</h6>
       </div>
-      <h6>
+      {/* <h6>
         <span className='fadein effectLeft'>My</span>
         <b className='effectRight skills'>Skills</b>
-      </h6>
+      </h6> */}
       <h6 class='express'>express</h6>
       <div className='flex'>
         <h6 class='node'>node</h6>

@@ -1,5 +1,5 @@
-import React from "react";
-
+import { React } from "react";
+import { Link } from "react-router-dom";
 const Slider1 = () => {
   const title = "diseño & creatividad";
   const description =
@@ -7,21 +7,25 @@ const Slider1 = () => {
 
   return (
     <>
-      <div class='centrado col s5 m3 l3'>
-        <div className='textSlider'>
-          <h4 className='fadein effectLeft'>{title}</h4>
-          <h1>
-            <span className='fadein effectLeft'>Soy</span>
-            <b className='effectRight'>Jennifer</b>
-          </h1>
-          <p className='fadein |effectLeft2'>{description}</p>
-        </div>
-      </div>
-      <div className='centrado col s7 m9 l9 '>
+    <div class='centrado col s12 m6 l6'>
+      <div className='textSlider'>
+        <h4 className='fadein effectLeft'>{title}</h4>
+        <h1>
+          <span className='fadein effectLeft'>Soy</span>
+          <b className='effectRight'>Jennifer</b>
+        </h1>
+        <p className='fadein |effectLeft2'>{description}</p>
+        <Link to='/contacto' classname='btnContact'>
+          Contacto
+        </Link>
+      </div>  </div>
+
+      <div class='centrado col s12 m6 l6'>
         <div className='images'>
-          <img className='effectUp imagePersonal' src='/images/jennifer.gif' />
+          <img className='effectUp' src='/images/jennifer.gif' />
         </div>
-      </div>
+    
+    </div>
     </>
   );
 };

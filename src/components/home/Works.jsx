@@ -1,6 +1,6 @@
 import React from "react";
 
-export const CoverPage = () => {
+export const Works = () => {
   const arrowSlider1 = "/images/net-price-calculator1.png";
   return (
     <div class='horiz-scroll-wrapper'>

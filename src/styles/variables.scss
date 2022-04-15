@@ -3,8 +3,8 @@ $background-color: rgb(12, 6, 22);
 $light-color: white;
 $dark-color: black;
 $pink: #e100ff;
-$yellow:#dfb55e;
-$red:#542d2e;
+$yellow: #dfb55e;
+$red: #542d2e;
 
 :root {
   font-family: "Raleway", sans-serif;
@@ -57,7 +57,7 @@ body {
 h4 {
   font-size: 1.2em !important;
   color: $yellow;
-  margin-top:0px!important;
+  margin-top: 0px !important;
   text-transform: uppercase;
   display: block;
   margin-bottom: -20px !important;
@@ -69,18 +69,18 @@ h1 {
   color: $light-color;
   text-align: left;
   font-weight: 700 !important;
-  display:  grid;
+  display: grid;
 
   span {
     justify-content: center;
-    color: $background-color;
 
+    color: #000000;
     text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
 
     letter-spacing: 5px;
   }
 }
-.circle{
+.circle {
   margin-left: 1%;
   margin-top: -300px;
   z-index: 0;
@@ -88,14 +88,12 @@ h1 {
 .secondary {
   font-size: 3em !important;
   text-align: end;
-  margin-top:100px
+  margin-top: 100px;
 }
 
-
-.third{
- 
+.third {
   margin-top: 50px;
-
+  display: block;
 }
 $base: 0.6rem;
 .chevron {
@@ -169,17 +167,16 @@ svg {
   max-width: 100%;
   height: auto;
 }
-.chartSpace{
+.chartSpace {
   display: block;
   width: -webkit-fill-available;
   z-index: 1;
 }
 .container {
-  width: 80%!important;
+  width: 80% !important;
 }
-.textRight{
+.textRight {
   text-align: right;
-
 }
 //-
 // The artwork layer controls the vertical movement and scale of the entire animation
@@ -269,23 +266,22 @@ svg {
 // .appSlider {
 //   height: 100%;
 // }
-.swiper-slide-active{
-  height: 100vh!important;
+.swiper-slide-active {
+  height: 100vh !important;
 }
-.swiper-slide-next{
-  height: 100vh!important;
+.swiper-slide-next {
+  height: 100vh !important;
   width: 100%;
 }
 body {
-
   font-size: 14px;
   color: #000;
   margin: 0;
   padding: 0;
 }
-.right{
+.right {
   text-align: rigth;
-  display:flex;
+  display: flex;
 }
 .swiper {
   width: 100%;
@@ -300,7 +296,7 @@ body {
     max-height: 100%;
   }
 }
-hr{
+hr {
   width: 9.53em;
   margin-top: 1.35em;
   margin-bottom: 1.35em;
@@ -309,7 +305,7 @@ hr{
   text-align: center;
   font-size: 18px;
   background: black;
-height:100vh;
+  height: 100vh;
   /* Center slide text vertically */
   display: -webkit-box;
   display: -ms-flexbox;
@@ -335,24 +331,23 @@ height:100vh;
 //SKILLS
 
 #techList {
- 
   color: #ffffff;
   display: inline-block;
+  text-align: left;
 }
 
 .react {
-
   letter-spacing: -0.05em;
-  font-size: 3rem;
+  font-size: 2.5rem;
   animation: effectDown 0.5s forwards linear;
- 
-  background-image: linear-gradient(to right, #000000, #d6ae5b);
+
+  // background-image: linear-gradient(to right, #000000, #d6ae5b);
 }
 .html5 {
   font-weight: 300;
   letter-spacing: -0.05em;
   font-size: 2rem;
-  margin: 20px;
+  margin-right: 20px;
   animation: effectDown 0.5s forwards linear;
 }
 
@@ -361,7 +356,6 @@ height:100vh;
   font-weight: 500;
   transform: rotate(90deg);
   font-size: 3rem;
-
 }
 
 .wordpress {
@@ -369,14 +363,15 @@ height:100vh;
   font-weight: 400;
   font-size: 2rem;
   animation: effectDown 0.5s forwards linear;
-  background-image: linear-gradient(to right, #000000 , #542d2e);
+  // background-image: linear-gradient(to right, #000000, #542d2e);
   padding: 10px;
-
 }
 
 .express {
-  letter-spacing: -0.05em;
+  letter-spacing: 1.8rem;
   font-weight: 300;
+ 
+  font-size: 2rem;
 }
 
 .responsive {
@@ -389,23 +384,24 @@ height:100vh;
   font-weight: 400;
   letter-spacing: 1.4em;
   font-size: 1rem;
-  background: $red;
-    padding: 10px;
+  // background: #231f20;
+  padding: 10px;
 }
 
 .node {
   letter-spacing: 0.045em;
   font-weight: 700;
   font-size: 1.5rem;
- 
+  // background: #1c0f0f;
+  margin-right: 10px;
+  padding-right: 10px;
 }
 
 .python {
   font-weight: 700;
   letter-spacing: -0.01em;
-  font-size: 3rem;
-  background-image: linear-gradient(to right, #000000 , #dfb55e);
-
+  font-size: 2.5rem;
+  // background-image: linear-gradient(to right, #000000, #dfb55e);
 }
 
 .mongodb {
@@ -419,32 +415,24 @@ height:100vh;
   font-weight: 700;
   letter-spacing: 0.1em;
   word-spacing: 0.2em;
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
-.skills {
-  color: $yellow;
-  font-weight: 700;
-  font-size: 5rem;
-  margin: 5px;
-  letter-spacing: -0.03em;
-}
 .flex {
   display: flex;
 }
 
 //cofee
-.ingrid{
-  display: inline-grid!important;
-    margin-top: 15%;
- 
+.ingrid {
+  display: inline-grid !important;
+  margin-top: 15%;
 }
 .containerCoffee {
   width: 300px;
   height: 280px;
   position: relative;
-
-
+  margin-top: 200px;
+  margin-left: 200px;
 }
 .coffee-header {
   width: 100%;
@@ -695,104 +683,98 @@ height:100vh;
   left: -8px;
   background-color: #000;
 }
-.centrado{
-a {
-  padding: 10px;
-  background: $yellow;
-  color: black;
-  border-radius: 20px;
-  margin-top: 30px;
-  display: table-caption;
-}}
-// ------------ END Fun stuff
-// .horiz-scroll-wrapper {
-//   height: 100vw;
-//   transform: rotate(-90deg) translateX(-100vh);
-//   transform-origin: top left;
-//   overflow-y: scroll;
-//   overflow-x: hidden;
-//   position: absolute;
+.centrado {
+  a {
+    padding: 10px;
+    background: $yellow;
+    color: black;
+    border-radius: 20px;
+    margin-top: 30px;
+    display: table-caption;
+  }
+}
 
-//   scrollbar-width: none;
-//   -ms-overflow-style: none;
-// }
-// ::-webkit-scrollbar {
-//   display: none;
-// }
+.boxes {
+  display: flex;
 
-// .horiz-scroll-inner {
-//   display: flex;
-//   flex-direction: row;
-//   width: fit-content;
-//   padding: 0;
-//   margin: 0;
-//   transform: rotate(90deg) translateY(-100vh);
-//   transform-origin: top left;
-//   overflow: hidden;
-// }
+  .box {
+    background-color: #fff;
+    flex: 1 1 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font: 1em/1 "Poppins", sans-serif;
+    font-weight: 400;
+    transition: all 0.6s ease-out;
+    position: relative;
 
-// .slide {
+    &__title {
+      font-size: 3vw;
+      color: white;
+      margin-bottom: 0.5em;
+      transition: all 0.3s ease-out 0.1s;
+    }
+    &__content {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(1, 1, 1, 0.5);
+      // backdrop-filter: blur(6px);
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: center;
+      justify-items: center;
+      align-content: center;
+      align-items: center;
+      opacity: 0;
+      transition: all 0.3s ease-in;
+      text-align: center;
+      padding: 2vw;
+    }
+    &__summary {
+      font-size: 1.2vw;
+      line-height: 1.4;
+      color: white;
+      margin: 0 auto;
+      max-width: 22vw;
+      transition: all 0.3s ease-out 0.1s;
+    }
 
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-//   color: black;
-//   background-color: white;
-//   border: 1px dotted #a4a4a4;
-// }
+    // 		Background color for boxes
+    &:nth-child(1) {
+      background-color: #2b50aa;
+      background: url(https://images.unsplash.com/photo-1485871981521-5b1fd3805eee?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80)
+        center/cover no-repeat;
+    }
+    &:nth-child(2) {
+      background-color: #ff9fe5;
+      background: url(https://images.unsplash.com/photo-1590655473571-742fd3b29b78?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80)
+        center/cover no-repeat;
+    }
+    &:nth-child(3) {
+      background-color: #ffd4d4;
+      background: url(https://images.unsplash.com/photo-1465850238811-80ce79442c7a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80)
+        center/cover no-repeat;
+    }
+    &:nth-child(4) {
+      background-color: #ff858d;
+      background: url(https://images.unsplash.com/photo-1585614938326-d57d07333bc0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80)
+        center/cover no-repeat;
+    }
 
-// .contenedor{
-//   height: 100vh;
-//   width: 70vh;
-//   display: flex;
-// }
-// .slide * {
-//   transform: var(--anti-transform);
-//   margin: 2vw;
-// }
+    // 		Hover effect
 
-// .slide:last-child {
-//   width: 70vw;
-// }
-
-// .slide.one:hover {
-//   background: hsl(-30deg, 80%, 60%);
-// }
-// .slide.two:hover {
-//   background: hsl(-60deg, 80%, 60%);
-// }
-// .slide.three:hover {
-//   background: hsl(-90deg, 80%, 60%);
-// }
-// .slide.four:hover {
-//   background: hsl(-120deg, 80%, 60%);
-// }
-// .slide.five:hover {
-//   background: hsl(-150deg, 80%, 60%);
-// }
-// .slide h4 {
-//   font-size: calc(1em + 3vmin);
-//   width: fit-content;
-//   margin-left: 0;
-// }
-// .slide h5 {
-//   font-size: calc(1em + 1vmin);
-//   width: fit-content;
-//   margin: 0;
-
-//   /* Media Queries */
-//   //   @media only screen and (max-width: 500px){
-// }
-
-// .my-image-class {
-
-//  height: 100vh;
-//   &:hover {
-//     background-image: var(--hover-image);
-
-//     // transform: scale(1.5);
-//     background-position:center;
-//     background-repeat: no-repeat;
-//     height: 100%;
-//   }
-// }
+    &:hover {
+      flex: 1 1 75%;
+      .box__title {
+        letter-spacing: 0;
+      }
+      .box__content {
+        opacity: 1;
+      }
+    }
+  }
+}

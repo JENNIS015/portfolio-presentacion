@@ -1,68 +1,41 @@
-import React from "react";
- 
 const data = {
   labels: ["Ene", "Feb", "Mar", "Abr", "May", "Jun"],
   datasets: [
     {
       label: "Crecimiento",
       data: [1, 15, 25, 30, 44, 100],
-      fill: true,
-      backgroundColor: '#dfb55e',
+      fill: false,
+      lineTension: 0.4,
+      pointBorderWidth: 2,
       borderColor:'#dfb55e'
     }
     
   ]
 }; 
 
-const totalDuration = 100000;
-
-const delayBetweenPoints = totalDuration / data.length;
-const previousY = (ctx) => ctx.index === 0 ? ctx.chart.scales.y.getPixelForValue(100) : ctx.chart.getDatasetMeta(ctx.datasetIndex).data[ctx.index - 1].getProps(['y'], true).y;
-// const animation = {
-//   x: {
-//     type: 'number',
-//     easing: 'linear',
-//     duration: delayBetweenPoints,
-//     from: NaN, // the point is initially skipped
-//     delay(ctx) {
-//       if (ctx.type !== 'data' || ctx.xStarted) {
-//         return 0;
-//       }
-//       ctx.xStarted = true;
-//       return ctx.index * delayBetweenPoints;
-//     }
-//   },
-//   y: {
-//     type: 'number',
-//     easing: 'linear',
-//     duration: delayBetweenPoints,
-//     from: previousY,
-//     delay(ctx) {
-//       if (ctx.type !== 'data' || ctx.yStarted) {
-//         return 0;
-//       }
-//       ctx.yStarted = true;
-//       return ctx.index * delayBetweenPoints;
-//     }
-//   }
-// };
-const options=[{
-    animation: {
-		easing: 'easeInOutQuad',
-		duration: 520000
-	},
-    interaction: {
-      intersect: false
-    },
-    plugins: {
-      legend: false
+ 
+  const options=[{
+  options: {
+    
+    animations: {
+      tension: {
+        duration: 10000,
+        easing: 'linear',
+        from: 10,
+        to: 0,
+        loop: true
+      }
     },
     scales: {
-      x: {
-        type: 'linear'
+      y: { // defining min and max so hiding the dataset does not change scale range
+        min: 0,
+        max: 100
       }
-    }}
-];
+    }
+  }
+ 
+}];
+
 
 export  {data, options}
 

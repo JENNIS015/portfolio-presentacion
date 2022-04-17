@@ -1,13 +1,13 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Section = () => {
   return (
-    <div className='container'>
+<div className="container">
  
-        <div class='row'>
-            <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem repellat sint doloribus. Mollitia saepe totam ducimus, beatae magni aperiam laborum error quaerat, magnam, doloremque vel reiciendis. Quibusdam voluptas fugit saepe.</h1></div> 
- 
-    </div>
+<h1 className='secondary'> <b>Comencemos</b><span>un nuevo proyecto</span> </h1> 
+<Link to="">< button classname="btn">Contactame</button></Link>
+</div>
   );
 };
 

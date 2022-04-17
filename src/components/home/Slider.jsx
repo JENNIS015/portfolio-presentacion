@@ -21,7 +21,7 @@ import { Chart, registerables } from "chart.js";
 Chart.register(...registerables);
 
 function Slider() {
-  const arrowSlider1 = "/images/02.jpg";
+  const image = "/images/02.jpg";
   const ZoomInScrollOut = batch(StickyIn(), FadeIn(), ZoomIn());
   const FadeUp = batch(Fade(), Move(), Sticky());
 
@@ -34,26 +34,27 @@ function Slider() {
       <ScrollPage page={0}>
         <Animator animation={ZoomInScrollOut}>
           <div id="slider ingrid">
-<div className="container">
-            <div className="row">
-              <div class="centrado col s12 m6 l6">
-                <div className="textSlider">
-                  <h4 className="fadein effectLeft">{title}</h4>
-                  <h1>
-                    <span className="fadein effectLeft">Soy</span>
-                    <b className="effectRight">Jennifer</b>
-                  </h1>
-                  <p className="fadein |effectLeft2">{description}</p>
+            <div className="container">
+              <div className="row">
+                <div class="centrado col s12 m6 l6">
+                  <div className="textSlider">
+                    <h4 className="fadein effectLeft">{title}</h4>
+                    <h1 className="plus">
+                      <span className="fadein effectLeft">Soy</span>
+                      <b className="effectRight">Jennifer</b>
+                    </h1>
+                    <p className="fadein |effectLeft2">{description}</p>
+                  </div>
                 </div>
-              </div>
 
-              <div class="centrado col s12 m6 l6">
-                <div className="images">
-                  <img className="effectUp" src="/images/jennifer.gif" />
+                <div class="centrado col s12 m6 l6">
+                  <div className="images">
+                    <img className="effectUp" src="/images/jennifer.gif" />
+                  </div>
                 </div>
               </div>
             </div>
-          </div></div>
+          </div>
         </Animator>
       </ScrollPage>
 
@@ -62,14 +63,12 @@ function Slider() {
           <div className="row">
             <div
               style={{
-               
                 justifyContent: "center",
                 alignItems: "center",
                 height: "100%",
               }}
             >
-          
-                <div class="col s12 m12 l6">
+              <div class="col s12 m12 l6">
                 <Animator animation={MoveOut(-1000, 0)}>
                   <h1 className="menor third">
                     <span className="fadein effectLeft">Skills</span>
@@ -77,9 +76,8 @@ function Slider() {
                   </h1>
                   <h4 className="fadein effectLeft">Conocimientos</h4>
                   <div className="space"></div>
-                  </Animator>
-                </div>
-
+                </Animator>
+              </div>
 
               <div class="col s12 m12 l6">
                 <div id="techList">
@@ -122,7 +120,13 @@ function Slider() {
         </div>
       </ScrollPage>
 
-      <div style={{ "background-image": `url('${arrowSlider1}')`, "z-index": "1","background-size":"cover" }}>
+      <div
+        style={{
+          "background-image": `url('${image}')`,
+          "z-index": "1",
+          "background-size": "cover",
+        }}
+      >
         <ScrollPage page={2}>
           <div className="container" style={{ "z-index": 1 }}>
             <div id="slider ingrid">
@@ -133,7 +137,7 @@ function Slider() {
                       <h4 className="fadein effectLeft">
                         Estadistica & Realidades
                       </h4>
-                      <h1 className="secondary">
+                      <h1 className="menor">
                         <b>Soluciones</b>
                         <span>Creativas</span>{" "}
                       </h1>
@@ -154,6 +158,7 @@ function Slider() {
           </div>
         </ScrollPage>
       </div>
+      
       {/* <ScrollPage page={5}>
         <div
           style={{

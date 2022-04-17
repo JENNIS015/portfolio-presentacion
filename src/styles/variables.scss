@@ -43,6 +43,9 @@ html {
   align-items: center;
  
 }
+.block{
+  display: block!important;
+}
 .imagePersonal {
   display: flex;
   z-index: 1;
@@ -71,8 +74,12 @@ h4 {
   letter-spacing: 4px;
   text-align: left;
 }
+
+h1.plus{
+  font-size: 12em!important;
+}
 h1 {
-  font-size: 5em!important;
+
   color: $light-color;
   text-align: left;
   font-weight: 700 !important;
@@ -161,6 +168,9 @@ $base: 0.6rem;
     transform: translateY($base * 8) scale(0.5);
   }
 }
+.card{background-color: #000000!important;}
+
+
 // .backgroundImage {
 //   height: 100vh;
 //   background-image: var(--image);
@@ -376,7 +386,6 @@ svg {
  
  //begin works
  .home-work_livecontrol-list {
-  display: -ms-grid;
   display: grid;
   grid-auto-columns: 1fr;
   grid-column-gap: 3.5em;
@@ -386,31 +395,37 @@ svg {
   -ms-grid-rows: auto;
   grid-template-rows: auto;
 }
-
-
+.margin-top-button-30{
+  margin: 30px 0px!important;
+}
 .col-item-wrapper {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    overflow: hidden;
-    height: 52.08em;
-    padding: 3em;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-box-pack: justify;
-    -webkit-justify-content: space-between;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    border-radius: 2em;
-    background-position: 50% 50%;
-    background-size: cover;
-    background-repeat: no-repeat;
-    -o-object-fit: fill;
-    object-fit: fill;
+display: -webkit-box;
+display: -webkit-flex;
+display: -ms-flexbox;
+display: flex;
+overflow: hidden;
+height: 52.08em;
+padding: 3em;
+-webkit-box-orient: vertical;
+-webkit-box-direction: normal;
+-webkit-flex-direction: column;
+-ms-flex-direction: column;
+flex-direction: column;
+-webkit-box-pack: justify;
+-webkit-justify-content: space-between;
+-ms-flex-pack: justify;
+justify-content: space-between;
+border-radius: 2em;
+
+background-position: 50% 50%;
+background-size: cover;
+background-repeat: no-repeat;
+-o-object-fit: fill;
+object-fit: fill;
+}
+.w-inline-block {
+  max-width: 100%;
+ 
 }
  .item{
   transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
@@ -434,25 +449,27 @@ svg {
   height: 0.52em;
   margin-right: 0.73em;
   border-radius: 50%;
-  background-color: #f76236;
+  background-color: $yellow;
 }
 
 .styled-subheading {
   margin-top: 0px;
-  font-family: 'Gt america extended', sans-serif;
   font-size: 0.8em;
   font-weight: 700;
   letter-spacing: 0.78em;
   text-transform: uppercase;
+  color:white
 }
 
 .work-cms_heading {
   font-size: 2.5em;
   text-transform: capitalize;
+  color:white
 }
 .work-cms_line-wrapper {
   max-width: 5.21em;
   margin-bottom: 1.56em;
+  color:white
 }
 
 //header
@@ -464,4 +481,87 @@ svg {
 
   .MuiPaper-root{
     background: black!important;
+    text-transform: uppercase;
+    font-size: 10px;
+    margin-top: 30px;
+    font-weight: 700;
+
   }
+
+
+.col-item-wrapper {
+    
+    &:hover {
+      filter: none!important;;
+    }
+}
+
+ 
+ 
+/* CSS */
+.button-86 {
+  all: unset;
+  width: 100px;
+  height: 30px;
+  font-size: 16px;
+  background: transparent;
+  border: none;
+  position: relative;
+  color: #f0f0f0;
+  cursor: pointer;
+  z-index: 1;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-86::after,
+.button-86::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: -99999;
+  transition: all .4s;
+}
+
+.button-86::before {
+  transform: translate(0%, 0%);
+  width: 100%;
+  height: 100%;
+  background: #28282d;
+  border-radius: 10px;
+}
+
+.button-86::after {
+  transform: translate(10px, 10px);
+  width: 35px;
+  height: 35px;
+  background: #ffffff15;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border-radius: 50px;
+}
+
+.button-86:hover::before {
+  transform: translate(5%, 20%);
+  width: 110%;
+  height: 110%;
+}
+
+.button-86:hover::after {
+  border-radius: 10px;
+  transform: translate(0, 0);
+  width: 100%;
+  height: 100%;
+}
+
+.button-86:active::after {
+  transition: 0s;
+  transform: translate(0, 5%);
+}

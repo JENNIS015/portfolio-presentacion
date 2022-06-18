@@ -20,14 +20,16 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: "1",
     cursor: "pointer",
   },
+ 
   link: {
-    textDecoration: "none",
     color: "white",
-    fontSize: "20px",
-    marginLeft: theme.spacing(20),
+    fontSize: "0.73rem",
+    textDecoration: "none",
+    letterSpacing: "0.26rem",
+    textAlign: "center",
+
     "&:hover": {
-      color: "white",
-      borderBottom: "1px solid white",
+      color: "#dfb55e",
     },
   },
 }));
@@ -51,17 +53,18 @@ function Navbar() {
             <Link to="/" className={classes.link}>
               Home
             </Link>
-            <Link to="/about" className={classes.link}>
-              Trabajos
+            <Link to="/projects" className={classes.link}>
+              Projects
+
             </Link>
             <Link to="/contact" className={classes.link}>
-              Contactp
+              Contact
             </Link>
-          
           </div>
         )}
       </Toolbar>
     </AppBar>
   );
+  
 }
 export default Navbar;

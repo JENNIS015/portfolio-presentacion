@@ -1,18 +1,12 @@
 import React from "react";
-
-import Section from "../components/home/Section";
-import "materialize-css/dist/css/materialize.min.css";
-import Work from "../components/home/Work";
-import Slider from "../components/home/Slider";
+import Slider from "../components/home/sliderPresentation/Slider";
+import Gallery from "../components/home/sliderProject/WorkPortfolio";
 
 const Home = () => {
   return (
-    
     <div className="row">
       <Slider />
-      <Work/>
-      <Section/>
- 
+      <Gallery />
     </div>
   );
 };

@@ -1,0 +1,92 @@
+.skills {
+  color: #373d43;
+  font-size: 5.5rem;
+}
+.techList {
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+
+.mongodb {
+  font-weight: 300;
+  letter-spacing: 1.1em;
+  font-size: 0.9rem;
+}
+.react {
+  letter-spacing: -0.05em;
+  font-size: 1.5rem;
+}
+.html5 {
+  font-weight: 300;
+  letter-spacing: -0.05em;
+  font-size: 1.2rem;
+  margin-right: 20px;
+}
+
+.css {
+  font-size: 2rem;
+}
+
+.sql {
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  word-spacing: 0.2em;
+  font-size: 0.5rem;
+}
+
+.wordpress {
+  letter-spacing: -0.1em;
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+.express {
+  letter-spacing: 1.8rem;
+  font-weight: 300;
+
+  font-size: 1rem;
+}
+
+.node {
+  letter-spacing: 0.045em;
+  font-weight: 700;
+  font-size: 1.5rem;
+  margin-right: 10px;
+  padding-right: 10px;
+}
+
+.python {
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  font-size: 1.5rem;
+}
+
+.javascript {
+  font-weight: 400;
+  letter-spacing: 1.4em;
+  font-size: 1rem;
+}
+
+.mission {
+  max-width: 18em;
+  font-size: 2em;
+  letter-spacing: 0.1em;
+  color: white;
+  margin-bottom: 40px;
+  animation: effectLeft 200ms ease-in-out;
+}
+.span {
+  font-weight: 800;
+}
+@keyframes effectLeft {
+  000% {
+    transform: translateX(-900px);
+    opacity: 0;
+    animation-delay: 1s;
+  }
+  100% {
+    opacity: 1;
+    visibility: initial;
+  }
+}

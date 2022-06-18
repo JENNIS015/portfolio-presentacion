@@ -1,0 +1,85 @@
+
+.container {
+  height: 100vh;
+}
+
+form {
+  min-width: 25rem;
+}
+.title {
+  color: #373d43;
+  font-size: 5.5rem;
+}
+
+.formControl {
+  background-color: #f2f6f8;
+  border: none;
+  box-shadow: 0px 7px 5px rgba(0, 0, 0, 0.11);
+  height: 3.3rem;
+  padding: 0.5rem 3.5rem;
+  margin: 10px;
+   width: -webkit-fill-available;
+}
+
+.formControl :focus {
+  background-color: #f2f6f8;
+  box-shadow: 0px 7px 5px rgba(0, 0, 0, 0.11);
+}
+.formAction{
+    width: 400px;
+}
+.message {
+  background-color: #f2f6f8;
+  border: none;
+  box-shadow: 0px 7px 5px rgba(0, 0, 0, 0.11);
+  margin: 10px;
+  height: 5.3rem;
+  padding: 0.5rem 3.5rem;
+  width: -webkit-fill-available;
+}
+
+::placeholder {
+ 
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #838788;
+  position: relative;
+  left: 0;
+}
+
+input,
+textarea {
+ 
+  color: #212529;
+  font-size: 1.1rem;
+}
+
+ 
+.btnPrimary {
+      font-size: larger;
+ 
+    height: 2.5rem;
+    line-height: 2.5rem;
+    width: 200px;
+    padding: 0 3rem;
+    border: 0;
+    background-image: linear-gradient(131deg, #f8cc47, #ff923c, #6d391c, #5f2f32);
+    color: white;
+    transition: all 0.3s ease-in-out;
+    margin: 10px;
+    max-width: -webkit-fill-available;
+ 
+}
+
+.btnPrimary:hover:enabled {
+  box-shadow: 0 0.5em 0.5em -0.4em #ff923cba;
+  background-size: 100% 100%;
+  transform: translateY(-0.15em);
+}
+
+@media (max-width: 768px) {
+    .title{
+        font-size: 2.5rem;
+        color: #f8cc47;
+    }
+}

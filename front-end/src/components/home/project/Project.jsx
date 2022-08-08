@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import styles from "./project.module.css";
 
 const Project = ({ slides }) => {
@@ -7,18 +6,20 @@ const Project = ({ slides }) => {
     <section id="project">
       <div className={styles.wrapper}>
         <div className={styles.colorProd}> </div>
-        <Link to={slides.url}>
+        <a href={slides.url} target="_blank">
           <img
             src={slides.image}
             className={styles.imgProd}
             alt={slides.name}
+            loading="lazy"
+            width="100%"
+            height="300px"
           />
           <div className={styles.infoProd}>
             <p className={styles.nombreProd}>{slides.name}</p>
             <p className={styles.extraInfo}>{slides.description}</p>
           </div>
-        </Link>
-        
+        </a>
       </div>
     </section>
   );

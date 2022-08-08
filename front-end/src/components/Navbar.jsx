@@ -3,12 +3,11 @@ import {
   AppBar,
   Toolbar,
   CssBaseline,
-  Typography,
   makeStyles,
   useTheme,
-  useMediaQuery
+  useMediaQuery,
 } from "@material-ui/core";
- 
+
 import NavbarMobile from "./NavbarMobile";
 import { Link } from "react-scroll";
 const useStyles = makeStyles((theme) => ({
@@ -17,18 +16,20 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
   },
   logo: {
-    flexGrow: "1",
+    flexGrow: "2",
     cursor: "pointer",
-    width:"30px"
+    width: "30px",
   },
- 
+
+
   link: {
     color: "white",
+    cursor: "pointer",
     fontSize: "0.73rem",
     textDecoration: "none",
     letterSpacing: "0.36rem",
     textAlign: "center",
-    textTransform:"upperCase",
+    textTransform: "upperCase",
 
     "&:hover": {
       color: "#dfb55e",
@@ -42,22 +43,22 @@ function Navbar() {
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
 
   return (
-    <AppBar  position="fixed">
-  
+    <AppBar position="fixed">
       <CssBaseline />
       <Toolbar>
-        <Typography variant="h4" className={classes.logo}>
+        <Link to="home" spy={true} smooth={true}>
           <img
             src="/images/logoJennifer.jpg"
             className={classes.logo}
             alt="Jennifer Sanchez"
+            height="100%"
           />
-        </Typography>
+        </Link>
         {isMobile ? (
           <NavbarMobile />
         ) : (
           <div className={classes.navlinks}>
-            <Link to="/" spy={true} smooth={true} className={classes.link}>
+            <Link to="home" spy={true} smooth={true} className={classes.link}>
               Home
             </Link>
             <Link
@@ -81,6 +82,5 @@ function Navbar() {
       </Toolbar>
     </AppBar>
   );
-  
 }
 export default Navbar;

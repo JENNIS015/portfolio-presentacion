@@ -14,17 +14,19 @@ function Slider() {
   const ZoomInScrollOut = batch(StickyIn(), FadeIn(), ZoomIn());
 
   return (
-    <ScrollContainer>
-      <ScrollPage page={0}>
-        <Animator animation={ZoomInScrollOut} classname="custom">
-          <SliderPresentation />
-        </Animator>
-      </ScrollPage>
+    <section id="home">
+      <ScrollContainer>
+        <ScrollPage page={0}>
+          <Animator animation={ZoomInScrollOut} classname="custom">
+            <SliderPresentation />
+          </Animator>
+        </ScrollPage>
 
-      <ScrollPage page={1}>
-        <SliderSkills />
-      </ScrollPage>
-    </ScrollContainer>
+        <ScrollPage page={1}>
+          <SliderSkills />
+        </ScrollPage>
+      </ScrollContainer>
+    </section>
   );
 }
 

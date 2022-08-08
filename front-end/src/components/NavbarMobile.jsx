@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import {
   Divider,
   Drawer,
-  
   IconButton,
   List,
   ListItem,
@@ -44,28 +43,24 @@ function NavbarMobile() {
     <>
       <Drawer open={openDrawer} onClose={() => setOpenDrawer(false)}>
         <List>
-          <ListItem style={{ width: 250 }} onClick={() => setOpenDrawer(false)}>
-            <ListItemText>
-              <Link to="/" className={classes.link}>
-                Home
-              </Link>
-            </ListItemText>
+          <ListItem onClick={() => setOpenDrawer(false)}>
+            <Link to="home" className={classes.link}>
+              <ListItemText>Home</ListItemText>
+            </Link>
           </ListItem>
           <Divider />
+
           <ListItem onClick={() => setOpenDrawer(false)}>
-            <ListItemText>
-              <Link to="projects" className={classes.link}>
-                Projects
-              </Link>
-            </ListItemText>
+            <Link to="projects" className={classes.link}>
+              <ListItemText>Projects</ListItemText>
+            </Link>
           </ListItem>
           <Divider />
+
           <ListItem onClick={() => setOpenDrawer(false)}>
-            <ListItemText>
-              <Link to="contact" className={classes.link}>
-                Contact
-              </Link>
-            </ListItemText>
+            <Link to="contact" className={classes.link}>
+              <ListItemText>Contact</ListItemText>
+            </Link>
           </ListItem>
           <Divider />
         </List>

@@ -7,7 +7,6 @@
   text-transform: uppercase;
   letter-spacing: 5px;
 }
-
 .mongodb {
   font-weight: 300;
   letter-spacing: 1.1em;
@@ -73,15 +72,13 @@
 }
 .mission {
   max-width: 18em;
-  font-size: 2em;
+ 
   letter-spacing: 0.1em;
   color: white;
   margin-bottom: 40px;
   animation: effectLeft 200ms ease-in-out;
 }
-.span {
-  font-weight: 800;
-}
+
 @keyframes effectLeft {
   000% {
     transform: translateX(-900px);
@@ -90,7 +87,7 @@
   }
   100% {
     opacity: 1;
-    visibility: initial;
+   
   }
 }
 
@@ -98,12 +95,52 @@
 @media (max-width: 768px) {
 .skills {
  
-  font-size: 2.5rem;
+  font-size: 1.8rem;
 }
 .mission {
 font-size: 1.4rem;
 }
 .containerDivisor{
   padding: 10px
+}
+.mongodb {
+  font-size: 0.8rem;
+}
+.react {
+  font-size: 1.0rem;
+}
+.html5 {
+  font-size: 1rem;
+
+}
+
+.css {
+  font-size: 1rem;
+}
+
+.sql {
+  font-size: 0.4rem;
+}
+
+.wordpress {
+  letter-spacing: -0.1em;
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+.express {
+  font-size: 0.6rem;
+}
+
+.node {
+  font-size: 1.0rem;
+}
+
+.python {
+  font-size: 1.0rem;
+}
+
+.javascript {
+  font-size: 0.5rem;
 }
 }

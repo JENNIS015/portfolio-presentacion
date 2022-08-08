@@ -6,6 +6,7 @@ import Gallery from "../components/home/project/WorkPortfolio";
 const Home = () => {
   return (
 
+    
     <div className="container">
       <Slider />
       <Gallery />

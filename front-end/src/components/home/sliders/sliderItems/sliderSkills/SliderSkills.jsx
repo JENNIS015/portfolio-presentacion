@@ -16,8 +16,11 @@ function SliderSkills() {
               <div>
                 <img
                   className="effectUp circle"
-                  src="/images/02.jpg"
+                  src="/images/02.webp"
                   alt="fullStack"
+                  loading="lazy"
+                  width="100%"
+                  height="100%"
                 />
               </div>
             </Animator>
@@ -29,7 +32,6 @@ function SliderSkills() {
                 Hi, I'm Jennfer Sanchez. I focused on creating a digital product
                 that create{" "}
                 <span className={styles.span}>
-                  {" "}
                   the solution that you're searching
                 </span>
                 .

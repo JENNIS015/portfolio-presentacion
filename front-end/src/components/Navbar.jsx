@@ -6,7 +6,7 @@ import {
   Typography,
   makeStyles,
   useTheme,
-  useMediaQuery,
+  useMediaQuery
 } from "@material-ui/core";
  
 import NavbarMobile from "./NavbarMobile";
@@ -19,14 +19,16 @@ const useStyles = makeStyles((theme) => ({
   logo: {
     flexGrow: "1",
     cursor: "pointer",
+    width:"30px"
   },
  
   link: {
     color: "white",
     fontSize: "0.73rem",
     textDecoration: "none",
-    letterSpacing: "0.26rem",
+    letterSpacing: "0.36rem",
     textAlign: "center",
+    textTransform:"upperCase",
 
     "&:hover": {
       color: "#dfb55e",
@@ -40,22 +42,22 @@ function Navbar() {
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
 
   return (
-    <AppBar position="static">
+    <AppBar  position="fixed">
+  
       <CssBaseline />
       <Toolbar>
         <Typography variant="h4" className={classes.logo}>
-          JS
+          <img
+            src="/images/logoJennifer.jpg"
+            className={classes.logo}
+            alt="Jennifer Sanchez"
+          />
         </Typography>
         {isMobile ? (
           <NavbarMobile />
         ) : (
           <div className={classes.navlinks}>
-            <Link
-              to="/"
-              spy={true}
-              smooth={true}
-              className={classes.link}
-            >
+            <Link to="/" spy={true} smooth={true} className={classes.link}>
               Home
             </Link>
             <Link

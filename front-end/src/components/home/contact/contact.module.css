@@ -4,6 +4,7 @@
 
 form {
   min-width: 25rem;
+  display: contents;
 }
 .title {
   color: #373d43;
@@ -44,7 +45,19 @@ form {
   position: relative;
   left: 0;
 }
-
+.contact {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  padding: 20px 0;
+  box-sizing: border-box;
+}
+.contact h1 {
+  display: contents;
+}
 input,
 textarea {
   color: #212529;
@@ -75,10 +88,12 @@ textarea {
 .success {
   color: #f8cc47;
   font-size: 1rem;
+      text-align: center;
 }
 .err {
   color: red;
   font-size: 1rem;
+      text-align: center;
 }
 
 @media (max-width: 768px) {

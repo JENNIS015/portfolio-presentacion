@@ -1,11 +1,12 @@
-import React from "react";
-import ContactForm from "../components/home/contacto/ContactForm";
-import Slider from "../components/home/sliderPresentation/Slider";
+import {React} from "react";
+import ContactForm from "../components/home/contact/ContactForm";
+import Slider from "../components/home/sliders/Slider";
 import Gallery from "../components/home/project/WorkPortfolio";
 
 const Home = () => {
   return (
-    <div className="row">
+
+    <div className="container">
       <Slider />
       <Gallery />
       <ContactForm/>
@@ -14,3 +15,4 @@ const Home = () => {
 };
 
 export default Home;
+

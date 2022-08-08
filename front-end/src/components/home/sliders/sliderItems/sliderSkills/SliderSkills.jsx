@@ -1,7 +1,7 @@
 import React from "react";
 import { Animator, MoveOut } from "react-scroll-motion";
 import styles from "./slider.module.css";
-function Slider2() {
+function SliderSkills() {
   return (
     <div
       style={{
@@ -9,22 +9,27 @@ function Slider2() {
         backgroundSize: "cover",
       }}
     >
-      <div className="containerDivisor">
+      <div className={styles.containerDivisor}>
         <div className="row centrado">
-          <div className="fifty fadein">
+          <div className="fifty fadein" id="image">
             <Animator animation={MoveOut(-300, 0)}>
               <div>
-                <img className="effectUp imagePc" src="/images/02.png" alt="fullStack" />
+                <img
+                  className="effectUp circle"
+                  src="/images/02.jpg"
+                  alt="fullStack"
+                />
               </div>
             </Animator>
           </div>
 
-          <div className="fifty fadein">
+          <div className="fifty fadein" id="name">
             <Animator animation={MoveOut(10, 0)}>
               <p className={styles.mission}>
                 Hi, I'm Jennfer Sanchez. I focused on creating a digital product
                 that create{" "}
                 <span className={styles.span}>
+                  {" "}
                   the solution that you're searching
                 </span>
                 .
@@ -53,4 +58,4 @@ function Slider2() {
   );
 }
 
-export default Slider2;
+export default SliderSkills;

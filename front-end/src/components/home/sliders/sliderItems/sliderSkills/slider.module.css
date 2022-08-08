@@ -67,7 +67,10 @@
   letter-spacing: 1.4em;
   font-size: 1rem;
 }
-
+.containerDivisor {
+  display: flex;
+  padding: 70px;
+}
 .mission {
   max-width: 18em;
   font-size: 2em;
@@ -89,4 +92,18 @@
     opacity: 1;
     visibility: initial;
   }
+}
+
+
+@media (max-width: 768px) {
+.skills {
+ 
+  font-size: 2.5rem;
+}
+.mission {
+font-size: 1.4rem;
+}
+.containerDivisor{
+  padding: 10px
+}
 }

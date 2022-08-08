@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import {
   Divider,
   Drawer,
+  
   IconButton,
   List,
   ListItem,
@@ -12,14 +13,27 @@ import { Link } from "react-scroll";
 
 import MenuIcon from "@material-ui/icons/Menu";
 
-const useStyles = makeStyles(() => ({
+const useStyles = makeStyles((theme) => ({
+  icon: {
+    color: "white",
+  },
+  navlinks: {
+    display: "flex",
+  },
   link: {
     textDecoration: "none",
     color: "white",
     fontSize: "20px",
+    textAlign: "center",
+
+    "&:hover": {
+      color: "#edbd59",
+      borderBottom: "1px solid #edbd59",
+    },
   },
-  icon: {
-    color: "white",
+  logo: {
+    flexGrow: "1",
+    cursor: "pointer",
   },
 }));
 
@@ -30,7 +44,7 @@ function NavbarMobile() {
     <>
       <Drawer open={openDrawer} onClose={() => setOpenDrawer(false)}>
         <List>
-          <ListItem onClick={() => setOpenDrawer(false)}>
+          <ListItem style={{ width: 250 }} onClick={() => setOpenDrawer(false)}>
             <ListItemText>
               <Link to="/" className={classes.link}>
                 Home

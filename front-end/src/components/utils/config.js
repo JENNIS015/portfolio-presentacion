@@ -12,7 +12,7 @@ const isLocalHost = Boolean(
 
 const API_URL = isLocalHost
   ? "http://localhost:8000"
-  : "https://api.jennifersanchez.dev";
+  : "https://personal-page-jennifer.herokuapp.com";
 
 export const api = axios.create({
   baseURL: API_URL,

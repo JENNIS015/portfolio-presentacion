@@ -1,22 +1,19 @@
 const express = require("express");
 const router = express.Router();
 const nodemailer = require("nodemailer");
-const {EMAIL} = require("../config/config.js");
-const logger=require("../logger")
+const { EMAIL } = require("../config/config.js");
+const logger = require("../logger");
 const transport = {
-
   host: EMAIL.HOST,
-  port: EMAIL.PORT,
+  port: EMAIL.PORT_EMAIL,
 
   auth: {
     user: "info@jennifersanchez.dev",
     pass: EMAIL.PASS,
   },
-  // === add this === //
   tls: { rejectUnauthorized: false },
 };
 
- 
 const transporter = nodemailer.createTransport(transport);
 
 transporter.verify((error, success) => {
@@ -26,9 +23,11 @@ transporter.verify((error, success) => {
     console.log("Server is ready to take messages");
   }
 });
-router.get("/", (req,res)=>{
-  return res.send("Hello World")
-})
+
+router.get("/", (req, res) => {
+  return res.json("Hello World");
+});
+
 router.post("/contact", (req, res, next) => {
   const name = req.body.name;
   const email = req.body.email;
@@ -44,7 +43,7 @@ router.post("/contact", (req, res, next) => {
   logger.info(`Email sent: ${email}`);
   transporter.sendMail(mail, (err, data) => {
     if (err) {
-      console.log(err)
+      console.log(err);
       res.json({
         msg: "fail",
       });

@@ -1,5 +1,5 @@
 # 🏪 Portfolio 🏪
-Este eCommerce fue desarrollado para el curso de CoderHouse con el nombre **Programación Backend** 
+Front-end realizado en react js y back-end para envio de correos electronicos de formulario de contacto.
 
 
 ## 📁 Datos del proyecto 📁
